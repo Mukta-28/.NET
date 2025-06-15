@@ -1,0 +1,14 @@
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\bin\Debug\net9.0\FieldsAndProperties.exe
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\bin\Debug\net9.0\FieldsAndProperties.deps.json
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\bin\Debug\net9.0\FieldsAndProperties.runtimeconfig.json
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\bin\Debug\net9.0\FieldsAndProperties.dll
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\bin\Debug\net9.0\FieldsAndProperties.pdb
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.GeneratedMSBuildEditorConfig.editorconfig
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.AssemblyInfoInputs.cache
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.AssemblyInfo.cs
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.csproj.CoreCompileInputs.cache
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.dll
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\refint\FieldsAndProperties.dll
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.pdb
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\FieldsAndProperties.genruntimeconfig.cache
+D:\DOTNET\Code\Day-1\Day-1\FieldsAndProperties\obj\Debug\net9.0\ref\FieldsAndProperties.dll
