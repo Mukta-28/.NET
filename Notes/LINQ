@@ -1,0 +1,116 @@
+LINQ
+
+• LINQ is a Language Integrated Query
+
+• LINQ provides the new way to manipulate the data, whether it is to or 
+from the database or with an XML file or with a simple list of dynamic 
+data.
+
+ • LINQ is a uniform query system in C# to retrieve the data from 
+different sources of data and formats such as XML, generics, 
+collections, ADO.Net DataSet, Web Service, MS SQL Server, and other 
+databases server.
+
+ • LINQ provides the rich, standardized query syntax in a .NET 
+programming language such as C# and VB.NET, which allows the 
+developers to interact with any data sources
+
+
+ --------Advantages of LINQ------
+ • We do not need to learn new query language syntaxes for different sources 
+of data because it provides the standard query syntax for the various data 
+sources.
+ • In LINQ, we have to write the Less code in comparison to the traditional 
+approach. 
+• LINQ provides the compile-time error checking as well as intelligence 
+support in Visual Studio. This powerful feature helps us to avoid run-time 
+errors.
+ • LINQ provides a lot of built-in methods that we can be used to perform the 
+different operations such as filtering, ordering, grouping, etc. which makes 
+our work easy.
+ • The query of LINQ can be reused
+
+ -------Writing LINQ Query--------
+ • LINQ queries return results as objects. It enables you to uses 
+object-oriented approach on the result set and not to worry about 
+transforming different formats of results into objects.
+ • Each Query is a combination of three things; they are:
+ 1. Initialization(to work with a particular data source)
+ 2. Condition(where, filter, sorting condition)
+ 3. Selection (single selection, group selection or joining)
+ • There are two basic ways to write a LINQ query to IEnumerable collection 
+or IQueryable data sources.
+ 1. Using Query Syntax
+ 2. Using Method Syntax
+
+LINQ------ Query-Syntax------
+ Points to Remember (FOR QUERY SYNTAX)
+ • As name suggest, Query Syntax is same like SQL (Structure Query 
+Language) syntax.
+ • Query Syntax starts with from clause and can be end 
+with Select or GroupBy clause.
+ • Use various other opertors like filtering, joining, grouping, sorting 
+operators to construct the desired result.
+ • Implicitly typed variable - var can be used to hold the result of the 
+LINQ query
+
+🔸 1. Syntax:
+Query Syntax:
+from emp in lstEmp select emp;
+
+Method Syntax:
+lstEmp.Where(emp => emp.Basic > 10000).Select(emp => emp.Name);
+🔸 Note: Always apply Where() before Select().
+
+🔸 2. Anonymous Types:
+Syntax:
+select new { emp.Name, emp.EmpNo };
+
+📌 Use when you want selected properties (not whole object).
+
+🔸 3. Deferred vs Immediate Execution:
+Deferred Execution (run only when needed):
+
+csharp
+Copy
+Edit
+var emps = from emp in lstEmp select emp;
+// executes only during foreach loop
+Immediate Execution (run instantly):
+
+csharp
+Copy
+Edit
+var emps = (from emp in lstEmp select emp).ToList();  
+// executes now, not later
+🧠 Tip: .ToList(), .ToArray() = immediate execution
+🔸 4. PLINQ (Parallel LINQ):
+Used for performance boost on big data.
+
+Syntax:
+lstEmp.AsParallel().Select(...);
+
+✅ Use when:
+
+Performance is priority
+
+You don't care about order
+
+⚠️ Use .AsOrdered() if order is required.
+
+🔸 5. Grouping + Aggregates:
+Syntax with Aggregates:
+
+csharp
+Copy
+Edit
+var result = from emp in lstEmp
+             group emp by emp.DeptNo into group1
+             select new {
+                 group1.Key,
+                 Count = group1.Count(),
+                 Max = group1.Max(e => e.Basic),
+                 Min = group1.Min(e => e.Basic)
+             };
+📌 group ... by ... into group1 – creates group
+📌 Apply: .Count(), .Max(), .Min() on group
