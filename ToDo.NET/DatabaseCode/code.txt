@@ -1,0 +1,1 @@
+All Insert, update, delete quries with Parameterize and with stored procedure
