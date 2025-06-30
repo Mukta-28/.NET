@@ -1,0 +1,101 @@
+Asp.net mvc core
+
+can display rows, cmd.ExecuteNonQuery to update
+Connection - Command - DataReader (Connected, read only, fwd only)
+
+
+-------------------------
+most other apps
+Batch Update
+Connection - Command - DataAdapter - DataSet (disconnected, updateable, xml)
+
+
+Read about it
+Constructor injection
+Dependency Injection
+
+
+28/06/2025
+
+.Net Framework
+
+Web Application/Webpage
+---------------
+
+event driven pattern
+lot of code was generated
+easier to code
+less control
+automatic state mgmt.
+heavier pages
+
+asp.net mvc (.Net Framework)
+----------------------------
+
+mvc pattern
+no generated code
+total control
+comparatively more difficult
+lighter pages
+==============================
+
+.net core
+asp.net core mvc (.net core)
+------------------
+70-80 percent similar code
+config diff
+
+To Do
+1. Create your own layout page and use it for all the views
+2. Read on ActionResult and find at least 10 derivedclasses of ActionResult
+3. Read on StatusCodeResult and find at least 5 derivedclasses of StatusCodeResult
+
+
+
+
+
+
+29/06/2025
+
+to do : implement the exception handling
+
+
+
+State mgmt. 
+
+1. ViewBag
+controller to View, only for the same request, values are lost on a Redirect
+dynamic object(ExpandoObject)
+ViewBag.prop = value;   -----> ViewData["prop"] = value;
+int I = ViewBag.prop
+ViewBag is a wrapper for ViewData
+
+
+2. ViewData
+controller to View, only for the same request, values are lost on a Redirect
+collection
+ViewData["key"] = value; - key is string, values is object
+int I = (int)ViewData["key"];
+
+3. TempData
+controller to View, only for the same request, values ARE NOT lost on a Redirect
+collection
+TempData["key"] = value; - key is string, values is object
+int I = (int)TempData["key"];
+
+
+4. Session variable
+values are stored across requests for a session
+
+
+
+
+
+
+
+
+
+
+
+
+
