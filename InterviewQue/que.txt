@@ -1,1 +1,7 @@
+1. How does the .NET framework work?
+.NET framework-based applications that are written in supportive languages like C#, F#, or Visual basic are compiled to Common Intermediate Language (CIL).
+Compiled code is stored in the form of an assembly file that has a .dll or .exe file extension.
+When the .NET application runs, Common Language Runtime (CLR) takes the assembly file and converts the CIL into machine code with the help of the Just In Time(JIT) compiler.
+Now, this machine code can execute on the specific architecture of the computer it is running on.
+
 
