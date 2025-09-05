@@ -42,3 +42,5 @@ EXE is an executable file that runs the application for which it is designed. An
 Dynamic Link Library (DLL) is a library that consists of code that needs to be hidden. The code is encapsulated inside this library. An application can consist of many DLLs which can be shared with the other programs and applications.
 
 
+
+
