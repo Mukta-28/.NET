@@ -41,6 +41,8 @@ EXE and DLLs are assembly executable modules.
 EXE is an executable file that runs the application for which it is designed. An EXE is produced when we build an application. Therefore the assemblies are loaded directly when we run an EXE. However, an EXE cannot be shared with the other applications.
 Dynamic Link Library (DLL) is a library that consists of code that needs to be hidden. The code is encapsulated inside this library. An application can consist of many DLLs which can be shared with the other programs and applications.
 
-
+4. What is CTS?
+CTS stands for Common Type System. It follows a set of structured rules according to which a data type should be declared and used in the program code. It is used to describe all the data types that are going to be used in the application.
+We can create our own classes and functions by following the rules in the CTS. It helps in calling the data type declared in one programming language by other programming languages.
 
 
