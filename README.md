@@ -1,5 +1,3 @@
 # .NET
 
 Welcome To .Net
-
-
