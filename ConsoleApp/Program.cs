@@ -34,13 +34,13 @@ namespace CalculatorApp
                     result = num1 / num2;
                 else
                 {
-                    Console.WriteLine("❌ Error: Cannot divide by zero!");
+                    Console.WriteLine(" Error: Cannot divide by zero!");
                     return;
                 }
             }
             else
             {
-                Console.WriteLine("❌ Invalid operator!");
+                Console.WriteLine(" Invalid operator!");
                 return;
             }
 
@@ -48,3 +48,4 @@ namespace CalculatorApp
         }
     }
 }
+
