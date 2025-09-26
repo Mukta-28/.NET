@@ -1,102 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-namespace StudentsManagementSystem
+
+namespace CalculatorApp
 {
-
-    class Student
-    { 
-      public int Id { get; set; }
-      public string Name { get; set; }
-
-      public int Age { get; set; }
-
-        public void Display()
-        {
-            Console.WriteLine($"ID: {Id}, Name: {Name}, Age: {Age}");
-        }
-    }
     internal class Program
     {
-        static List<Student> students = new List<Student>();
-        static int nextId = 1;
         static void Main(string[] args)
         {
-            bool running = true;
+            Console.WriteLine("=== Simple Calculator ===");
 
-            while (running)
+            // Ask first number
+            Console.Write("Enter first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            // Ask operator
+            Console.Write("Enter operator (+, -, *, /): ");
+            string op = Console.ReadLine();
+
+            // Ask second number
+            Console.Write("Enter second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            double result = 0;
+
+            if (op == "+")
+                result = num1 + num2;
+            else if (op == "-")
+                result = num1 - num2;
+            else if (op == "*")
+                result = num1 * num2;
+            else if (op == "/")
             {
-                Console.WriteLine("\n=== Student Management System ===");
-                Console.WriteLine("1. Add Student");
-                Console.WriteLine("2. View Students");
-                Console.WriteLine("3. Search Student by ID");
-                Console.WriteLine("4. Exit");
-                Console.Write("Choose an option: ");
-
-                string choice = Console.ReadLine();
-
-                switch (choice)
+                if (num2 != 0)
+                    result = num1 / num2;
+                else
                 {
-                    case "1":
-                        AddStudent();
-                        break;
-                    case "2":
-                        ViewStudents();
-                        break;
-                    case "3":
-                        SearchStudent();
-                        break;
-                    case "4":
-                        running = false;
-                        Console.WriteLine("Exiting... Goodbye!");
-                        break;
-                    default:
-                        Console.WriteLine("Invalid choice! Try again.");
-                        break;
+                    Console.WriteLine("❌ Error: Cannot divide by zero!");
+                    return;
                 }
             }
-        }
-        static void AddStudent()
-        {
-            Console.Write("Enter student name: ");
-            string name = Console.ReadLine();
-
-            Console.Write("Enter student age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-
-            Student student = new Student { Id = nextId++, Name = name, Age = age };
-            students.Add(student);
-
-            Console.WriteLine("Student added successfully!");
-        }
-        static void ViewStudents()
-        {
-            if (students.Count == 0)
+            else
             {
-                Console.WriteLine("No students found.");
+                Console.WriteLine("❌ Invalid operator!");
                 return;
             }
 
-            Console.WriteLine("\n--- Student List ---");
-            foreach (var student in students)
-            {
-                student.Display();
-            }
+            Console.WriteLine($"Result = {result}");
         }
-        static void SearchStudent()
-        {
-            Console.Write("Enter Student ID to search: ");
-            int id = Convert.ToInt32(Console.ReadLine());
-
-            Student student = students.Find(s => s.Id == id);
-
-            if (student != null)
-                student.Display();
-            else
-                Console.WriteLine("Student not found.");
-        }
-
-
-
-
     }
 }
